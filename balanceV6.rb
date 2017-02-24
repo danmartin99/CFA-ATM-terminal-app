@@ -11,13 +11,14 @@ end
 # Performs a withdrawl
 
 def withdrawl
+
   puts " Enter Withdrawl Amount"
-    WithdrawlAmount = gets.chomp.to_i
-    if @balance - WithdrawlAmount <= 0
+    withdrawl_amount = gets.chomp.to_i
+    if @balance - withdrawl_amount <= 0
       puts "So sad to bad you do not have enough money to do that!!!"
     end
 
-  @balance = @balance - WithdrawlAmount
+  @balance = @balance - withdrawl_amount
   printbalance()
 end
 
@@ -25,9 +26,9 @@ end
 
 def deposit
   puts " Enter Deposit Amount"
-    DepositAmount = gets.chomp.to_i
-    
-  @balance = @balance + DepositAmount
+    deposit_amount = gets.chomp.to_i
+
+  @balance = @balance + deposit_amount
   printbalance()
 end
 
